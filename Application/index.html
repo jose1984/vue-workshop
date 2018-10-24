@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue Workshop</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in index" v-bind:key="item.id"><a :href="item.link">{{item.text}}</a></li>
+        </ul>
+    </div>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        var vm = {
+            el: '#app',
+            data: {
+                index: [
+                    {
+                        id: 1,
+                        text: 'Example 1',
+                        link: 'example-1.html'
+                    },
+                    {
+                        id: 2,
+                        text: 'Example 2',
+                        link: 'example-2.html'
+                    },
+                    {
+                        id: 3,
+                        text: 'Example 3',
+                        link: 'example-3.html'
+                    }
+                ]
+            }
+        }
+
+        var app = new Vue(vm)
+    </script>
+</body>
+
+</html>

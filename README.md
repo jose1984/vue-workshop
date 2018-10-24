@@ -32,6 +32,8 @@ var vm = {
 var app = new Vue(vm)
 ```
 
+Follow the example [here](./Application/example-1.html).
+
 ## Resume
 
 When we say Vue is a **progressive framework**, that means allow us to write an scalable web application. So we can begin writing an small project like a landing page, using a very tiny javascript library skiping huge modules or features that we are not going to use until more advances phases of our project. Then, as soon as our requirements turns more complex, we could add those modules to reach our goals.

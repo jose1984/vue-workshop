@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Example 3</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+
+        <todo-item v-for="todo in todos" v-bind:todo="todo" v-bind:key="todo.id">
+        </todo-item>
+    </div>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        var todoItem = Vue.component('todo-item', {
+            props: ['todo'],
+            template: `
+            <li>
+                <input type="checkbox" :id="todo.id" v-model="todo.completed" @change="todoCompleted">
+                <label :for="todo.id">{{ todo.title }}</label>
+            </li>`
+        })
+
+        var vm = {
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                todos: []
+            },
+            methods: {
+                todoCompleted: function () {
+                    alert('completed!')
+                }
+            },
+            created() {
+                fetch('https://jsonplaceholder.typicode.com/todos')
+                    .then(response => response.json())
+                    .then(todos => this.todos = todos)
+            }
+        }
+
+        var app = new Vue(vm)
+    </script>
+</body>
+
+</html>
