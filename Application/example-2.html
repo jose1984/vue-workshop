@@ -9,8 +9,7 @@
     <div id="app">
         {{ message }}
 
-        <todo-item v-for="todo in todos" v-bind:todo="todo" v-bind:key="todo.id">
-        </todo-item>
+        <todo-item v-for="todo in todos" v-bind:todo="todo" v-bind:key="todo.id"></todo-item>
     </div>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
