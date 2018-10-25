@@ -1,6 +1,6 @@
 # Introduction 
 
-In this workshop we will learn how to develop a web application using [Vue](https://vuejs.org) (pronounced /vjuː/, like view), which is a progressive framework for building user interfaces. We will go through simple use cases until reaching a professional level. Vue is s, it is useful in both small applications and large projects.
+In this workshop we will learn how to develop a web application using [Vue](https://vuejs.org) (pronounced /vjuː/, like view), which is a progressive framework for building user interfaces. We will go through simple use cases until reaching a professional level. Vue can be used to develop small web component, small webapps or large projects.
 
 If you'd like to learn more about Vue, we've created a workshop suitable for all levels.
 
@@ -38,7 +38,7 @@ Follow the example [here](./Application/example-1.html).
 
 When we say Vue is a **progressive framework**, that means allow us to write an scalable web application. So we can begin writing an small project like a landing page, using a very tiny javascript library skiping huge modules or features that we are not going to use until more advances phases of our project. Then, as soon as our requirements turns more complex, we could add those modules to reach our goals.
 
-Vue like the DOM works in an tree manner over the HTML. Starting from a `root` component, in our case `<div id="app">`, this means that everything that is out of `root`, is not reachable by Vue. Which is really useful, since we can integrate a Vue application in any web application that is already using other technology, such as React, jQuery or even plain javascript.
+Vue like the DOM works in an tree manner over the HTML. Starting from a `root` component, in our case `<div id="app">`, this means that everything that is out of `root`, is not reachable by Vue. Which is really useful when you want to integrate it into another web applications that use technologies such as React, jQuery or even plain javascript.
 
 ## Vue cli ...
 
